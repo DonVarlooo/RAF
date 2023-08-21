@@ -6,7 +6,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <%= render "search_bar" %>
+    <%= render "pages/search_bar" %>
       <h2 class="title">Rent a Friend</h2>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
@@ -19,8 +19,8 @@
           <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="link_to 'Sign in', new_user_session_path">Sign in</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="link_to 'logout', destroy_user_session_path, method: :delete">Log out</a>
+              <a class="dropdown-item" href="/users/sign_in">Sign in</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="/users/sign_out">Log out</a>
             </div>
           </li>
           <!--li class="nav-item"-->
