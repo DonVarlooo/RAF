@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+CATEGORY = %w[sympa cool mechant grincheux dormeur]
+puts 'Creating 50 fake friends...'
+
+50.times do
+  friend = Friend.new(
+    name: Faker::Name.name,
+    category: CATEGORY.sample,
+    price: rand(0..1000),
+    user_id: 1
+  )
+  friend.save!
+end
+puts 'Finished!'
