@@ -1,7 +1,11 @@
 <div class="container-show">
 <div class="row">
   <div class="col">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <% if @friend.photo.attached? %>
+        <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
+      <% end %>
   </div>
   <div class="col pt-5 ps-5">
       <h2><%= @friend.name %></h2>
