@@ -1,0 +1,35 @@
+<h1 class="text-center">My booking</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div>
+        <h4>The friend you chose</h4>
+        <div>
+          <% if @friend.photo.attached? %>
+            <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+            <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
+          <% end %>
+        </div>
+        <div><%= @friend.name %></div>
+        <div><%= @friend.category %></div>
+        <div><%= @friend.postal_address %></div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div><h4>Your information</h4></div>
+      <div>
+        <p>Your booking starts on</p>
+        <p><%= @booking.start_date %></p>
+      </div>
+      <div>
+        <p>And finishes on</p>
+        <p><%= @booking.end_date %></p>
+      </div>
+      <div><p>Total Price : for the meagre amount of : <%= @friend.price %> x Number of days (démerde toi pour conter)</p></div>
+    </div>
+
+  </div>
+</div>
