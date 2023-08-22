@@ -8,7 +8,10 @@
       <p><strong>Catégorie: </strong><%= @friend.category %></p>
       <p><strong>Prix: </strong><%= @friend.price %></p>
       <p><strong>Adresse: </strong><%= @friend.postal_address %></p>
-      <div class="btn btn-outline-primary">Book me!</div>
+      <div class="btn btn-outline-primary">
+        <%= link_to "Book me", new_friend_booking_path(@friend) %>
+      </div>
+
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_friend, only: [:new, :create, :index]
+  before_action :set_friend, only: [:new, :create, :index, :show]
   def index
     @user = current_user
     @bookings = Booking.all
@@ -9,12 +9,16 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
+    @booking.user_id = current_user.id
     @booking.friend = @friend
     if @booking.save!
-      redirect_to root_path
+      redirect_to friend_booking_path(@friend, @booking)
     else
       render :new, status: :unprocessable_entity
     end
