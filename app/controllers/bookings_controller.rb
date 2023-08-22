@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
-  before_action :set_friend, only: [:new, :create]
+  before_action :set_friend, only: [:new, :create, :index]
+  def index
+    @user = current_user
+    @bookings = Booking.all
+  end
 
   def new
     @booking = Booking.new
