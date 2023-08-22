@@ -1,0 +1,17 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Create a new friend</h3>
+        <%= simple_form_for @friend do |f| %>
+          <%= f.input :name, placeholder: "Friend's name" %>
+          <%= f.input :category, placeholder: "Category" %>
+          <%= f.input :price, placeholder: "Price" %>
+          <%= f.input :postal_address, placeholder: "Address" %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
