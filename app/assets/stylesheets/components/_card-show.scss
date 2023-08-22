@@ -1,0 +1,24 @@
+.container-show{
+  overflow: hidden;
+  height: 350px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 75%;
+  margin-left: 12%;
+  padding-left: 2%;
+}
+
+.container-show img {
+  height: 350px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
