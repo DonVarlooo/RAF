@@ -18,9 +18,10 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "pages/navbar" %>
+    <div style="height: 80px;">
+      <%= render "shared/navbar" %>
+    </div>
     <%= yield %>
-    <%= render "pages/footer" %>
+    <%= render "shared/footer" %>
   </body>
 </html>
-  
