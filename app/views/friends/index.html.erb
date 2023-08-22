@@ -1,9 +1,13 @@
 <div class="cards">
-      <div class="card-product">
-        <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
-        <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+      <% @friends.each do |friend| %>
+        <div class="card-product">
+          <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
+          <div class="card-product-infos">
+            <h2><%= friend.name %></h2>
+            <p><strong>Catégorie: </strong><%= friend.category %></p>
+            <p><strong>Prix: </strong><%= friend.price %></p>
+            <p><strong>Adresse: </strong><%= friend.postal_address %></p>
+          </div>
         </div>
-      </div>
+      <% end %>
 </div>
