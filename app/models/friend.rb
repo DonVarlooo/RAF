@@ -1,5 +1,5 @@
 class Friend < ApplicationRecord
-  CATEGORY = %w[Sympa Cool Mechant Grincheux Dormeur]
+  CATEGORIES = %w[Sympathique Alcoolique Cool Méchant Grincheux Dormeur Pointeur Joyeux Copilote Mystérieux Dragueur Attachiant Moelleux Vicieux Karaokeur]
 
   belongs_to :user
   has_many :bookings, dependent: :destroy
