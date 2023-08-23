@@ -1,75 +1,78 @@
+.container {
+  margin-left: 200px;
+}
+
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin-right: 16px;
-  margin-left: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
 }
 
 .card-product {
+  text-decoration: none;
+  font-family: Pacifico;
   overflow: hidden;
-  height: 120px;
-  background: white;
+  height: 150px;
+  width: 450px;
+  background: rgb(252, 252, 252);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  border-radius: 10px;
 }
 
 .card-product img {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   height: 100%;
-  width: 120px;
+  width: 150px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+  font-family: Pacifico;
+  color: #ff0199;
+  text-decoration: none;
+  font-size: 21px;
+  margin-top: 5px;
 }
 
 .card-product p {
-  font-size: 12px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 0.9;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding-left: 30px;
+  padding-top: 10px;
+  width: 100%;
 }
 
 // Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
+   .cards {
+     grid-template-columns: 1fr;
   }
-}
+ }
 
-// Medium devices (tablets, 768px and up)
+// // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .cards {
+   .cards {
     grid-template-columns: 1fr 1fr;
-  }
-}
+   }
+ }
 
-// Large devices (desktops, 992px and up)
+// // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
+   .cards {
+     grid-template-columns: 1fr 1fr 1fr;
+   }
+ }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
