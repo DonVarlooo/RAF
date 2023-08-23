@@ -7,15 +7,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <%#= render "shared/search_bar" %>
-      <li class="nav-item dropdown d-flex">
+      <%# <li class="nav-item dropdown d-flex">
           <form action="#">
           <%  categories = %w[Sympa Cool Mechant Grincheux Dormeur] %>
-            <label for="lang">Categories</label>
-            <select name="languages" id="lang">
-            <% categories.each do |category| %>
-            <option value= category> <%= category %></option>
-            <% end %>
-            </select>
+            <%# <label for="lang">Categories</label>
+            <select name="languages" id="lang"> %>
+            <%# <% categories.each do |category| %>
+            <%# <% <option value= category> <%= category </option> %>
+            <%# <% end %>
+            <%# </select>
           </form>
       </li>
       <li class="nav-item dropdown d-flex">
@@ -24,7 +24,7 @@
           <input type="range" id="price" name="price" min="0" max="1000" />
           <label for="price">Price</label>
         </div>
-      </li>
+      </li> %>
       <h2 class="title">Rent a Friend</h2>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
