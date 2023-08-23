@@ -5,7 +5,7 @@
         <h3>Create a new friend</h3>
         <%= simple_form_for @friend do |f| %>
           <%= f.input :name, placeholder: "Friend's name" %>
-          <%= f.input :category, collection: Friend::CATEGORY%>
+          <%= f.input :category, collection: Friend::CATEGORIES%>
           <%= f.input :price, placeholder: "Price" %>
           <%= f.input :postal_address, placeholder: "Address" %>
           <%= f.input :photo, as: :file %>
