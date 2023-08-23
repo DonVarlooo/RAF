@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
   def accepted_booking
     @booking = Booking.find(params[:id])
     @booking.status = true
-    @booking.save
+    @booking.save!
     redirect_to pages_path
   end
 
