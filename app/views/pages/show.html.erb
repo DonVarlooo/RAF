@@ -1,0 +1,60 @@
+<div class="container">
+  <h1>My profile</h1>
+    <div class="row pt-3">
+      <div class="col-3">
+        <div class="nav-tabs pb-3">
+          <a href="/users/edit"><i class="fa-solid fa-gear fa-spin" style="color: #7e7e7e;"></i>   User settings</a>
+        </div>
+        <div class="nav-tabs">
+          <a href="#"><i class="fa-solid fa-spinner fa-spin" style="color: #7e7e7e;"></i>   Pending requests</a></li>
+          <ul>
+            <% if @pendings.empty? %>
+              <p>Nothing</p>
+            <% else %>
+              <% @pendings.each do |booking|  %>
+                <li>
+                  Le booking a lieu de <%= booking.start_date  %> à <%= booking.end_date  %> et concerne <%= booking.friend.name  %>
+                  <%= link_to 'Accept', accept_path(booking), data: { turbo_method: :patch } %>
+                  <%= link_to 'Refuse', refuse_path(booking), data: { turbo_method: :patch } %>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class="nav-tabs">
+          <a href="#"><i class="fa-solid fa-clock-rotate-left fa-bounce" style="color: #7e7e7e;"></i>   History</a>
+          <ul>
+            <% if @accepts.empty? %>
+              <p>Nothing</p>
+            <% else %>
+              <% @accepts.each do |booking|  %>
+                <li>
+                  Le booking a lieu de <%= booking.start_date  %> à <%= booking.end_date  %> et concerne <%= booking.friend.name  %>
+                </li>
+              <% end %>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-9 ps-4 pb-4">
+        <div class="user">
+          <div class="user-img">
+          <% if @user.photo.attached? %>
+            <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+            <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
+          <% end %>
+          </div>
+          <div class="user-infos">
+            <p><strong>Name: </strong><%= @user.name %></p>
+            <p><strong>Username: </strong><%= @user.user_name %></p>
+            <p><strong>Adresse: </strong><%= @user.postal_address %></p>
+            <p><strong>Email: </strong><%= @user.email %></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>

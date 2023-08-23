@@ -30,6 +30,20 @@ class BookingsController < ApplicationController
   def update
   end
 
+  def accepted_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = true
+    @booking.save
+    redirect_to pages_path
+  end
+
+  def refused_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = false
+    @booking.save
+    redirect_to pages_path
+  end
+
   private
 
   def booking_params
