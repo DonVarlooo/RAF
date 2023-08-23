@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     resources :bookings
   end
   get "pages", to: "pages#show"
+  patch 'accept/:id', to: 'bookings#accepted_booking', as: 'accept'
+  patch 'refuse/:id', to: 'bookings#refused_booking', as: 'refuse'
 end
