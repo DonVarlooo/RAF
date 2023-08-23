@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :friends do
     resources :bookings
   end
+  get "pages", to: "pages#show"
 end
