@@ -12,6 +12,10 @@
                           required: true,
                           autofocus: true,
                           input_html: { autocomplete: "email" }%>
+              <%= f.input :name,
+                          required: false,
+                          autofocus: true,
+                          input_html: { autocomplete: "name" }%>
               <%= f.input :user_name,
                           required: true,
                           autofocus: true,
@@ -20,6 +24,10 @@
                           required: true,
                           autofocus: true,
                           input_html: { autocomplete: "postal_address" }%>
+              <%= f.input :photo,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "photo" }%>
               <%= f.input :password,
                           required: true,
                           hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
