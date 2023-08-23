@@ -8,10 +8,10 @@
         <div class="nav-tabs">
           <a href="#"><i class="fa-solid fa-spinner fa-spin" style="color: #7e7e7e;"></i>   Pending requests</a></li>
           <ul>
-            <% if @pendings.empty? %>
+            <% if @friend_booking.empty? %>
               <p>Nothing</p>
             <% else %>
-              <% @pendings.each do |booking|  %>
+              <% @friend_booking.each do |booking|  %>
                 <li>
                   Le booking a lieu de <%= booking.start_date  %> à <%= booking.end_date  %> et concerne <%= booking.friend.name  %>
                   <%= link_to 'Accept', accept_path(booking), data: { turbo_method: :patch } %>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="nav-tabs">
-          <a href="#"><i class="fa-solid fa-clock-rotate-left fa-bounce" style="color: #7e7e7e;"></i>   History</a>
+          <a href="#"><i class="fa-solid fa-clock-rotate-left fa-bounce" style="color: #7e7e7e;"></i>   Friends Rented</a>
           <ul>
             <% if @accepts.empty? %>
               <p>Nothing</p>
@@ -58,3 +58,6 @@
 
     </div>
 </div>
+
+<%= @friend_bookings %>
+<%= console %>
