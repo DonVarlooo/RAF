@@ -10,9 +10,9 @@
       </div>
       <div class="col pt-5 ps-5">
           <h2><%= @friend.name %></h2>
-            <p>Catégorie : <%= @friend.category %></p>
-            <p>Prix : <%= @friend.price %> €</p>
-            <p>Adresse : <%= @friend.postal_address %></p>
+            <p>Category: <%= @friend.category %></p>
+            <p>Price: <%= @friend.price %> €</p>
+            <p>Address: <%= @friend.postal_address %></p>
           <button class="btn-book btn-outline-primary">
             <%= link_to "Book me", new_friend_booking_path(@friend) %>
           </button>
