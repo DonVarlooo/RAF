@@ -12,16 +12,16 @@ export default class extends Controller {
   updatePrice() {
     const startDate = this.startDateInputTarget.value
     const endDate = this.endDateInputTarget.value
-    const days = this.#diffInDays(startDate, endDate)
-    const totalValue = this.#totalValue(days)
-    this.#setPriceValue(totalValue)
+    const days = this.diffInDays(startDate, endDate)
+    const totalValue = this.totalValue(days)
+    this.setPriceValue(totalValue)
   }
 
-  #setPriceValue(value) {
+  setPriceValue(value) {
     this.priceHolderTarget.innerText = value
     }
 
-  #diffInDays(startDate, endDate) {
+  diffInDays(startDate, endDate) {
     if (startDate && endDate) {
       const diffTime = (Date.parse(endDate) - Date.parse(startDate))
 
@@ -32,7 +32,7 @@ export default class extends Controller {
       return days + 1
   }
 
-  #totalValue(days) {
+  totalValue(days) {
     return (days) * this.priceValue
     }
 
