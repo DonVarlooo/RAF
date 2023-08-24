@@ -10,4 +10,7 @@ class User < ApplicationRecord
 
   validates :email, :encrypted_password, :user_name, presence: true
 
+  # geocoded_by :postal_address
+  # after_validation :geocode, if: :will_save_change_to_postal_address?
+
 end

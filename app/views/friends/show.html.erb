@@ -10,12 +10,12 @@
       </div>
       <div class="col pt-5 ps-5">
           <h2><%= @friend.name %></h2>
-          <p><strong>Catégorie: </strong><%= @friend.category %></p>
-          <p><strong>Prix: </strong><%= @friend.price %></p>
-          <p><strong>Adresse: </strong><%= @friend.postal_address %></p>
-          <div class="btn btn-outline-primary">
+            <p>Category: <%= @friend.category %></p>
+            <p>Price: <%= @friend.price %> €</p>
+            <p>Address: <%= @friend.postal_address %></p>
+          <button class="btn-book btn-outline-primary">
             <%= link_to "Book me", new_friend_booking_path(@friend) %>
-          </div>
+          </button>
         </div>
       </div>
   </div>

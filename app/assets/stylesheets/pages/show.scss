@@ -1,7 +1,9 @@
 .container h1{
   font-family: Pacifico;
+  color: #ff0199;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .nav-tabs{
@@ -26,11 +28,14 @@ a{
   height: 300px;
   width: 300px;
   border-radius: 50%;
+  border: 2px solid;
+  border-color: #ff0199;
 }
 
 .user-infos{
   font-family: Pacifico;
   font-size: larger;
   padding-top: 30px;
-  padding-left: 30px;
+  padding-left: 40px;
+  opacity: 0.7;
 }
