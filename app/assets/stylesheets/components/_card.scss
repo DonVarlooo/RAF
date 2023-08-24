@@ -1,8 +1,14 @@
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 40px;
+  // justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .card-product {
@@ -13,7 +19,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   border-radius: 10px;
+  margin-right: 20px;
   padding-right: 10px;
+  transition: transform .2s;
+}
+
+.card-product:hover {
+  transform: scale(1.15);
 }
 
 .card-product img {
@@ -28,7 +40,7 @@
   color: #ff0199;
   text-decoration: none;
   font-size: 21px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 #adresse {
@@ -44,6 +56,7 @@
 .card-product p {
   font-family: Pacifico;
   color: #00A3AC;
+  opacity: 1;
   font-size: 15px;
   line-height: 1.4;
   margin-bottom: 0;
@@ -54,8 +67,8 @@
 
 .card-product .card-product-infos {
   padding-left: 30px;
-  padding-top: 10px;
   width: 100%;
+  padding-bottom: 30px;
 }
 
 // Smallest device
