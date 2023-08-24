@@ -25,6 +25,21 @@
         </div>
 
         <div class="nav-tabs">
+          <a href="#"><i class="fa-solid fa-clock-rotate-left fa-bounce" style="color: #7e7e7e;"></i>   Waiting for confirmation</a>
+          <ul>
+            <% if @my_bookings.empty? %>
+              <p>No activity</p>
+            <% else %>
+              <% @my_bookings.each do |booking|  %>
+                <li>
+                  Le booking a lieu de <%= booking.start_date  %> à <%= booking.end_date  %> et concerne <%= booking.friend.name  %>
+                </li>
+              <% end %>
+          <% end %>
+          </ul>
+        </div>
+
+        <div class="nav-tabs">
           <a href="#"><i class="fa-solid fa-clock-rotate-left fa-bounce" style="color: #7e7e7e;"></i>   Friends Rented</a>
           <ul>
             <% if @accepts.empty? %>
@@ -38,7 +53,9 @@
           <% end %>
           </ul>
         </div>
+
       </div>
+
 
       <div class="col-9 ps-4 pb-4">
         <div class="user">
@@ -50,14 +67,14 @@
           <% end %>
           </div>
           <div class="user-infos">
-            <p><strong>Name: </strong><%= @user.name %></p>
-            <p><strong>Username: </strong><%= @user.user_name %></p>
-            <p><strong>Adresse: </strong><%= @user.postal_address %></p>
-            <p><strong>Email: </strong><%= @user.email %></p>
+            <p>Nom : <%= @user.name %></p>
+            <p>Username : <%= @user.user_name %></p>
+            <p>Adresse : <%= @user.postal_address %></p>
+            <p>Email : <%= @user.email %></p>
           </div>
         </div>
       </div>
-
+      
     </div>
 </div>
 

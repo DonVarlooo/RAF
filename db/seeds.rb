@@ -11,7 +11,10 @@ Friend.destroy_all
 Booking.destroy_all
 puts 'Done!'
 
+
 User.create!(email: 'toto@gmail.com', password: 'azerty', user_name: "Alphonse", postal_address: "12 rue des Bonnes Vignes")
+
+# User.create!(email: 'toto@gmail.com', password: 'azerty', user_name: "Alphonse", postal_address: "12 rue des Bonnes Vignes")
 # User.create!(email: 'roger@gmail.com', password: 'azerty', user_name: "roger", postal_address: "7 rue des Bonnes Vignes")
 # User.create!(email: 'alpha@gmail.com', password: 'azerty', user_name: "alpha", postal_address: "10 rue des Bonnes Vignes")
 # User.create!(email: 'romeo@gmail.com', password: 'azerty', user_name: "Roméo", postal_address: "25 rue des Bonnes Vignes")
@@ -20,6 +23,7 @@ User.create!(email: 'toto@gmail.com', password: 'azerty', user_name: "Alphonse",
 
 CATEGORY = %w[Sympathetic Alcoholic Cool Mean Grumpy Sleepy Flirty Joyful Copilot Mysterious Sexy Attachiant Mellow Vicious]
 puts 'Creating 10 fake friends...'
+
 
 jessica = Friend.create!(
   name: "Jessica",
@@ -224,7 +228,9 @@ tessa = Friend.create!(
   user: User.all.sample
 )
 
+
 file = File.open("app/assets/images/ditessa.jpg")
 tessa.photo.attach(io: file, filename: "#{tessa.name.downcase}.png", content_type: "image/png")
 tessa.save!
+
 puts 'Finished!'
