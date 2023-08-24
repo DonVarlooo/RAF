@@ -1,3 +1,21 @@
+.container-show-friend{
+  overflow: hidden;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 75%;
+  margin-top: 5%;
+  margin-left: 12%;
+  padding-left: 2%;
+  border-radius: 16px;
+}
+
+.row-show-friend{
+    width: 100%;
+}
+
 .btn-book{
   background-color:  #00A3AC;
   font-family: Pacifico;
@@ -5,6 +23,8 @@
   border: none;
   padding: 8px;
   margin-top: 25px;
+  margin-left: 15%;
+  margin-bottom: 10%;
 }
 
 .btn-book:hover {
@@ -14,21 +34,4 @@
 p {
   font-family: Pacifico;
   opacity: 0.8;
-}
-
-.container-show-friend{
-  overflow: hidden;
-  height: 350px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  width: 75%;
-  margin-left: 12%;
-  padding-left: 2%;
-  border-radius: 16px;
-}
-
-.row-show-friend{
-    width: 100%;
 }
