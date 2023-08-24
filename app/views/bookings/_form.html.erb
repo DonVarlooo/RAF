@@ -1,0 +1,15 @@
+
+    <div  class="col-12 col-md-6 offset-lg-3 pt-5 pb-5">
+      <div class="bg-white p-3 shadow" >
+        <h3>My booking</h3>
+        <%= simple_form_for [@friend, @user, @booking] do |f| %>
+          <%= f.input :start_date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+            <%= f.input :end_date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+          <%= f.submit class: 'btn-book btn-flat' %>
+        <% end %>
+      </div>
+    </div>
