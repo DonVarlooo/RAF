@@ -5,10 +5,22 @@
         <%= simple_form_for [@friend, @user, @booking] do |f| %>
           <%= f.input :start_date,
             as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+            input_html: {
+              data: {
+                controller: "datepicker",
+                datepicker_target: 'startDateInput',
+                dynamic_price_target: 'startDateInput',
+                action:"change->dynamic-price#updatePrice"
+                }
+              } %>
             <%= f.input :end_date,
             as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+            input_html: { data: { controller: "datepicker",
+                                  datepicker_target: 'endDateInput',
+                                  dynamic_price_target: 'endDateInput',
+                                  action:"change->dynamic-price#updatePrice"
+            }
+          } %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>

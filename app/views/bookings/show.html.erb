@@ -5,12 +5,10 @@
     <div class="col-3 mt-1 card-show-booking-sum">
       <div class="card-show-booking-sum-up"><h4>Your information</h4></div>
       <div>
-        <p>Your booking starts on</p>
-        <p><%= @booking.start_date %></p>
+        <p>Your booking starts on the <%= @booking.start_date.strftime('%d/%m/%Y') %></p>
       </div>
       <div>
-        <p>And finishes on</p>
-        <p><%= @booking.end_date %></p>
+        <p>And finishes on the <%= @booking.end_date.strftime('%d/%m/%Y') %></p>
       </div>
       <div><p>Total Price : for the meagre amount of : <%= @friend.price %> x Number of days (démerde toi pour compter)</p></div>
     </div>
