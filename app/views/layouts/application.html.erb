@@ -14,6 +14,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script>
+  flatpickr("#datepicker", {
+    minDate: "today", // Disable dates before today
+    defaultDate: "today", // Set default date to today
+  });
+</script>
     <%= javascript_importmap_tags %>
   </head>
 
