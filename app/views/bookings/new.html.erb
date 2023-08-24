@@ -1,18 +1,25 @@
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white p-3 shadow">
-        <h3>My booking</h3>
-        <%= simple_form_for [@friend, @user, @booking] do |f| %>
-          <%= f.input :start_date,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
-            <%= f.input :end_date,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
-          <%= f.submit class: 'btn-book btn-flat' %>
-        <% end %>
-      </div>
+
+<div class="container-show-friend mb-5">
+  <div class="row row-show-friend">
+    <div class="col-6 ps-5 pt-5 pb-5">
+      <% if @friend.photo.attached? %>
+        <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle" %>
+      <% else %>
+        <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
+      <% end %>
     </div>
+    <div class="col-6 pt-5">
+      <h2><%= @friend.name %></h2>
+        <p>Catégorie : <%= @friend.category %></p>
+        <p>Prix : <%= @friend.price %> €</p>
+        <p>Adresse : <%= @friend.postal_address %></p>
+
+    </div>
+      <div data-controller="toggle" class="btn-book-me">
+        <button data-action="click->toggle#fire" class="btn-book btn-outline-primary mt-5"> Book me!</button>
+          <div data-toggle-target="togglableElement" class="d-none col-12 ">
+            <%= render "form" %>
+          </div>
+      </div>
   </div>
 </div>
