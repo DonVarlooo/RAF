@@ -56,3 +56,19 @@
 .btn-outline-primary{
   border-radius: 5px;
 }
+
+.container-home {
+  // display: wrap;
+  height: 100%;
+  // width: 80%;
+}
+
+.cards-container {
+  flex-grow: 1;
+}
+
+#map-home {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
