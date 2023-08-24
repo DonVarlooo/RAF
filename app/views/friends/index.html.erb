@@ -1,29 +1,35 @@
-<%= render "shared/filters" %>
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-        <div class="cards">
-          <% @friends.each do |friend| %>
-          <%= link_to friend_path(friend), class: "text-decoration-none" do%>
-            <div class="card-product">
-              <% if friend.photo.attached? %>
-                <%= cl_image_tag friend.photo.key, height: 300, width: 400, crop: :fill %>
-              <% else %>
-                <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
-              <% end %>
-              <div class="card-product-infos">
-                <h2><%= friend.name %></h2>
-                <p>Catégorie : <%= friend.category %></p>
-                <p>Prix : <%= friend.price %> € </p>
-                <p id="adresse">Adresse : <%= friend.postal_address %></p>
+
+<div data-controller="categories">
+  <%= render "shared/filters" %>
+  <div class="container-home">
+    <div class="row container-index-cards-map">
+      <div class="col-6">
+        <div class="cards-container">
+          <div class="cards">
+              <% @friends.each do |friend| %>
+              <div>
+                <%= link_to friend_path(friend), class: "text-decoration-none" do%>
+                  <div class="card-product" id="cards">
+                    <% if friend.photo.attached? %>
+                      <%= cl_image_tag friend.photo.key, height: 300, width: 400, crop: :fill %>
+                    <% else %>
+                      <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
+                    <% end %>
+                    <div class="card-product-infos">
+                      <h2><%= friend.name %></h2>
+                      <p data-categories-target="cards">Category: <%= friend.category %></p>
+                      <p>Price: <%= friend.price %> € </p>
+                      <p id="address">Address: <%= friend.postal_address %></p>
+                    </div>
+                  </div>
+                <% end %>
               </div>
-            </div>
-            <% end %>
-          <% end %>
+              <% end %>
+          </div>
         </div>
       </div>
-      <div class="col-6">
-        <div style="width: 100%; height: 600px;"
+      <div class="col-4">
+        <div id="map-home" class="" style=""
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

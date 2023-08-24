@@ -1,8 +1,23 @@
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 40px;
+  // justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  // justify-content: center;
+  align-items: center;
+  // gap: 30px;
+  a {
+    padding-top: 0;
+  }
+}
+
+.container-index-cards-map {
   justify-content: center;
+  // gap: 40px;
 }
 
 .card-product {
@@ -13,8 +28,10 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   border-radius: 10px;
+  // margin-right: 50px;
   padding-right: 10px;
   transition: transform .2s;
+  margin-bottom: 35px;
 }
 
 .card-product:hover {
@@ -36,7 +53,7 @@
   margin-top: 10px;
 }
 
-#adresse {
+#address {
   font-family: Pacifico;
   color: #000000;
   font-size: 15px;
@@ -56,8 +73,6 @@
   margin-top: 4px;
 }
 
-
-
 .card-product .card-product-infos {
   padding-left: 30px;
   width: 100%;
@@ -66,25 +81,25 @@
 
 // Smallest device
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-   .cards {
-     grid-template-columns: 1fr;
-  }
- }
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//    .cards {
+//      grid-template-columns: 1fr;
+//   }
+//  }
 
-// // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-   .cards {
-    grid-template-columns: 1fr 1fr;
-   }
- }
+// // // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//    .cards {
+//     grid-template-columns: 1fr 1fr;
+//    }
+//  }
 
-// // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-   .cards {
-     grid-template-columns: 1fr 1fr 1fr;
-   }
- }
+// // // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//    .cards {
+//      grid-template-columns: 1fr 1fr 1fr;
+//    }
+//  }
 
 // Extra large devices (large desktops, 1200px and up)
