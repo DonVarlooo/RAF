@@ -1,8 +1,8 @@
-<div class="container-show-friend">
+<div class="container-show-friend mb-5">
   <div class="row row-show-friend">
     <div class="col-6 ps-5 pt-5 pb-5">
       <% if @friend.photo.attached? %>
-        <%= cl_image_tag @friend.photo.key, height: 300, width: 300, crop: :fill, class: "rounded-circle" %>
+        <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle" %>
       <% else %>
         <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
       <% end %>
@@ -14,7 +14,7 @@
         <p>Adresse : <%= @friend.postal_address %></p>
     </div>
       <div data-controller="toggle" class="btn-book-me">
-        <button data-action="click->toggle#fire" class="btn-book btn-outline-primary mt-5"> Book Me!</button>
+        <button data-action="click->toggle#fire" class="btn-book btn-outline-primary mt-5"> Book me!</button>
           <div data-toggle-target="togglableElement" class="d-none col-12 ">
             <%= render "form" %>
           </div>

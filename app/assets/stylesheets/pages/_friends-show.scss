@@ -23,11 +23,25 @@
   border: none;
   padding: 8px;
   margin-top: 25px;
-  margin-left: 15%;
-  margin-bottom: 10%;
+  margin-left: 14%;
+  position: relative;
+  bottom: 50px; left: 5px;
+}
+.btn-flat{
+  background-color:  #00A3AC;
+  font-family: Pacifico;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  margin-top: 25px;
+  margin-left: 14%;
 }
 
 .btn-book:hover {
+  background-color:#ff0199;
+}
+
+.btn-flat:hover {
   background-color:#ff0199;
 }
 
