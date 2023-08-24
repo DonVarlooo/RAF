@@ -1,5 +1,6 @@
 class FriendsController < ApplicationController
   def index
+    @user = current_user
     @friends = Friend.all
     @markers = @friends.geocoded.map do |friend|
       {
