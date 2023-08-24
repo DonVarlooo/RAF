@@ -1,22 +1,21 @@
-<div class="container-show">
-  <div class="card">
-    <div class="row">
-      <div class="col">
-          <% if @friend.photo.attached? %>
-            <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
-          <% else %>
-            <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
-          <% end %>
-      </div>
-      <div class="col pt-5 ps-5">
-          <h2><%= @friend.name %></h2>
-            <p>Category: <%= @friend.category %></p>
-            <p>Price: <%= @friend.price %> €</p>
-            <p>Address: <%= @friend.postal_address %></p>
-          <button class="btn-book btn-outline-primary">
-            <%= link_to "Book me", new_friend_booking_path(@friend) %>
-          </button>
-        </div>
-      </div>
+
+<div class="container-show-friend">
+  <div class="row row-show-friend">
+    <div class="col-6 ps-5">
+      <% if @friend.photo.attached? %>
+        <%= cl_image_tag @friend.photo.key, height: 300, width: 300, crop: :fill, class: "rounded-circle" %>
+      <% else %>
+        <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
+      <% end %>
+    </div>
+    <div class="col-6 pt-5">
+      <h2><%= @friend.name %></h2>
+        <p>Catégorie : <%= @friend.category %></p>
+        <p>Prix : <%= @friend.price %> €</p>
+        <p>Adresse : <%= @friend.postal_address %></p>
+      <button class="btn-book btn-outline-primary">
+        <%= link_to "Book me", new_friend_booking_path(@friend) %>
+      </button>
+    </div>
   </div>
 </div>
