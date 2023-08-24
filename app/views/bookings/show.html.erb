@@ -1,25 +1,9 @@
-<h1 class="text-center">My booking</h1>
+<h1 class="header">My booking</h1>
 
-<div class="container">
+<div class="container show-booking mt-4 pt-3 pb-5 ps-4">
   <div class="row">
-    <div class="col-6">
-      <div>
-        <h4>The friend you chose</h4>
-        <div>
-          <% if @friend.photo.attached? %>
-            <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
-          <% else %>
-            <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
-          <% end %>
-        </div>
-        <div><%= @friend.name %></div>
-        <div><%= @friend.category %></div>
-        <div><%= @friend.postal_address %></div>
-      </div>
-    </div>
-
-    <div class="col-6">
-      <div><h4>Your information</h4></div>
+    <div class="col-3 mt-1 card-show-booking-sum">
+      <div class="card-show-booking-sum-up"><h4>Your information</h4></div>
       <div>
         <p>Your booking starts on</p>
         <p><%= @booking.start_date %></p>
@@ -30,6 +14,30 @@
       </div>
       <div><p>Total Price : for the meagre amount of : <%= @friend.price %> x Number of days (démerde toi pour compter)</p></div>
     </div>
+
+    <div class="col-9">
+      <div class="container">
+        <div class="row card-show-booking">
+          <div class="color"><h4>The friend you chose</h4></div>
+          <div class="col-6 card-show-booking-photo">
+            <% if @friend.photo.attached? %>
+              <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle" %>
+            <% else %>
+              <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
+            <% end %>
+          </div>
+          <div class="col-6 card-show-booking-infos">
+            <div>
+              <h4><%= @friend.name %></h4>
+              <h4><%= @friend.category %></h4>
+              <h4><%= @friend.postal_address %></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
 
   </div>
 </div>

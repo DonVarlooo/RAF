@@ -119,7 +119,7 @@ scarlett = Friend.create!(
   name: "Scarlett",
   category: CATEGORY.sample,
   price: rand(0..1000),
-  postal_address: "14 avenue général de Gaulle, Boulogne",
+  postal_address: "5 rue Blondeau, Boulogne Billancourt",
   description: "Entre toi et moi il y a un produit qui s'appelle un produit, et c'est un produit qui s'appelle l'oxygène, alors si tu fais ça (inspiration/expiration) comme ça, tu vis, mais si je tue l'oxygène comme sur la lune, tu meurs !!",
   user: User.all.sample
 )
