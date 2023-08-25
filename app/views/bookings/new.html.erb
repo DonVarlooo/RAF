@@ -5,7 +5,7 @@
     <div class="col-1"></div>
     <div class="col-5 pt-3 pb-5">
       <% if @friend.photo.attached? %>
-        <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle" %>
+        <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle friend-img" %>
       <% else %>
         <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
       <% end %>
