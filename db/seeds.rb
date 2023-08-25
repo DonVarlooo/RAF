@@ -182,35 +182,6 @@ arnold.photo.attach(io: file, filename: "#{arnold.name.downcase}.png", content_t
 arnold.save!
 
 
-will = Friend.create!(
-  name: "Will",
-  category: "Mysterious",
-  price: rand(0..1000),
-  postal_address: "14 avenue général de Gaulle, Rennes",
-  description: "Le Cycle... le cycle du cosmos dans la vie... c'est une grande roue. Qui est faite de... choses, de moments, de feelings... et la vérité, c'est qu'il n'y a pas de vérité; la vérité, c'est qu'il faut trouver sa propre vérité. Ma vérité à moi? Comment veux-tu que je te parle de cette manière? Tu m'aurais parlé il y a cinq ans, ou bien il y a trois ans, ou il y a six mois! Ou hier... ou demain... Tu m'aurais parlé de cette manière, j'aurais pas pu te répondre de cette façon.",
-  user: User.all.sample
-)
-
-file = File.open("app/assets/images/dismith.jpg")
-will.photo.attach(io: file, filename: "#{will.name.downcase}.png", content_type: "image/png")
-will.save!
-
-
-tessa = Friend.create!(
-  name: "Tessa",
-  category: "Joyful",
-  price: rand(0..1000),
-  postal_address: "14 avenue général de Gaulle, Biarritz",
-  description: "Et puis, il y a la mort; et la mort n'existe pas. La mort, c'est la seconde dimension; la vraie dimension de la vie, c'est l'univers! Et c'est là où on revient, soit dans la même enveloppe, soit dans quelque chose d'autre dans laquelle on a envie de revenir et... on progresse. Le progrès sur la Vérité. Et je sais que même si tu comprends pas ce que je dis, tu le comprends.",
-  user: User.all.sample
-)
-
-
-file = File.open("app/assets/images/ditessa.jpg")
-tessa.photo.attach(io: file, filename: "#{tessa.name.downcase}.png", content_type: "image/png")
-tessa.save!
-
-
 gerard = Friend.create!(
   name: "Gerard",
   category: "Mellow",
@@ -237,5 +208,32 @@ allan = Friend.create!(
 file = File.open("app/assets/images/diallan.jpg")
 allan.photo.attach(io: file, filename: "#{allan.name.downcase}.png", content_type: "image/png")
 allan.save!
+
+will = Friend.create!(
+  name: "Will",
+  category: "Mysterious",
+  price: rand(0..1000),
+  postal_address: "14 avenue général de Gaulle, Rennes",
+  description: "Le Cycle... le cycle du cosmos dans la vie... c'est une grande roue. Qui est faite de... choses, de moments, de feelings... et la vérité, c'est qu'il n'y a pas de vérité; la vérité, c'est qu'il faut trouver sa propre vérité. Ma vérité à moi? Comment veux-tu que je te parle de cette manière? Tu m'aurais parlé il y a cinq ans, ou bien il y a trois ans, ou il y a six mois! Ou hier... ou demain... Tu m'aurais parlé de cette manière, j'aurais pas pu te répondre de cette façon.",
+  user: User.all.sample
+)
+
+file = File.open("app/assets/images/dismith.jpg")
+will.photo.attach(io: file, filename: "#{will.name.downcase}.png", content_type: "image/png")
+will.save!
+
+
+tessa = Friend.create!(
+  name: "Tessa",
+  category: "Mysterious",
+  price: rand(0..1000),
+  postal_address: "14 avenue général de Gaulle, Biarritz",
+  description: "Et puis, il y a la mort; et la mort n'existe pas. La mort, c'est la seconde dimension; la vraie dimension de la vie, c'est l'univers! Et c'est là où on revient, soit dans la même enveloppe, soit dans quelque chose d'autre dans laquelle on a envie de revenir et... on progresse. Le progrès sur la Vérité. Et je sais que même si tu comprends pas ce que je dis, tu le comprends.",
+  user: User.all.sample
+)
+
+file = File.open("app/assets/images/ditessa.jpg")
+tessa.photo.attach(io: file, filename: "#{tessa.name.downcase}.png", content_type: "image/png")
+tessa.save!
 
 puts 'Finished!'
