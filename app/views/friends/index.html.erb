@@ -10,7 +10,7 @@
                 <%= link_to new_friend_booking_path(friend), class: "text-decoration-none" do%>
                   <div class="card-product" id="cards">
                     <% if friend.photo.attached? %>
-                      <%= cl_image_tag friend.photo.key, height: 300, width: 400, crop: :fill %>
+                      <%= cl_image_tag friend.photo.key, height: 300, width: 400, gravity: :face, crop: :fill %>
                     <% else %>
                       <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
                     <% end %>
