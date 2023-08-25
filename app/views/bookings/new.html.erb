@@ -1,24 +1,26 @@
 
-<div class="container-show-friend mb-5">
+<div class="container-show-friend">
   <div class="row row-show-friend">
-    <div class="col-6 ps-5 pt-5 pb-5">
+      <h2 class="pt-3 text-center"><%= @friend.name %></h2>
+    <div class="col-1"></div>
+    <div class="col-5 pt-3 pb-5">
       <% if @friend.photo.attached? %>
         <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle" %>
       <% else %>
         <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
       <% end %>
     </div>
-    <div class="col-6 pt-5">
-      <h2 class="pb-5"><%= @friend.name %></h2>
-        <p>Catégorie : <%= @friend.category %></p>
-        <p>Prix : <%= @friend.price %> €</p>
-        <p>Adresse : <%= @friend.postal_address %></p>
-        <p>Adresse : <%= @friend.description %></p>
+    <div class="col-5 pt-3">
+        <p>Category : <%= @friend.category %></p>
+        <p>Price : <%= @friend.price %> €</p>
+        <p>Address : <%= @friend.postal_address %></p>
+        <p>Description : <%= @friend.description %></p>
 
     </div>
-      <div data-controller="toggle" class="btn-book-me">
-        <button data-action="click->toggle#fire" class="btn-book btn-outline-primary mt-5"> Book me!</button>
-          <div data-toggle-target="togglableElement" class="d-none col-12 ">
+    <div class="col-1"></div>
+      <div data-controller="toggle">
+        <button data-action="click->toggle#fire" class="btn-book btn-book-me btn-outline-primary mt-5"> Book me!</button>
+          <div data-toggle-target="togglableElement" class="d-none col-12">
             <div data-controller= "dynamic-price" data-dynamic-price-price-value="<%= @friend.price %>">
               <%= render "form" %>
               <h3>Total price: <span data-dynamic-price-target="priceHolder"><%= @friend.price %></span> €</h3>

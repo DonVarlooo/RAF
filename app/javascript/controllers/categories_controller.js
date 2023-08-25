@@ -11,6 +11,7 @@ export default class extends Controller {
   filter(event){
     event.preventDefault();
     const catogoryFilter = event.currentTarget.value;
+
     this.cardsTargets.forEach(card => {
       if (!card.innerText.includes(catogoryFilter)) {
         card.closest("#cards").classList.add("d-none")
@@ -19,5 +20,4 @@ export default class extends Controller {
       }
     });
   }
-
 }
