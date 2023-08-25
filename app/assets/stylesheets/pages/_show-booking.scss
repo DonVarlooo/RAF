@@ -1,0 +1,37 @@
+h1, h4, h6{
+  font-family: Pacifico;
+}
+
+.header{
+  text-align: center;
+  color: #ff0199;
+}
+
+.show-booking{
+  font-family: Pacifico;
+  background: rgb(252, 252, 252);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.card-show-booking{
+  display: flex;
+  text-align: center;
+}
+
+.card-show-booking-infos{
+  margin-top: 12%;
+}
+
+.card-show-booking-sum{
+  text-align: center;
+}
+
+.card-show-booking-sum-up{
+  padding-bottom: 30%;
+  color: #00A3AC;
+}
+
+.color{
+  color: #00A3AC;
+}

@@ -1,7 +1,5 @@
-
 <div data-controller="categories">
   <%= render "shared/filters" %>
-
   <div class="container-home">
     <div class="row container-index-cards-map">
       <div class="col-6">
@@ -9,7 +7,7 @@
           <div class="cards">
               <% @friends.each do |friend| %>
               <div>
-                <%= link_to friend_path(friend), class: "text-decoration-none" do%>
+                <%= link_to new_friend_booking_path(friend), class: "text-decoration-none" do%>
                   <div class="card-product" id="cards">
                     <% if friend.photo.attached? %>
                       <%= cl_image_tag friend.photo.key, height: 300, width: 400, crop: :fill %>
@@ -26,7 +24,6 @@
                 <% end %>
               </div>
               <% end %>
-
           </div>
         </div>
       </div>

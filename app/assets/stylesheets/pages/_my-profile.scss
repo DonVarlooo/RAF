@@ -1,0 +1,23 @@
+.btn-accept {
+  background-color:  #00A3AC;
+  font-family: Pacifico;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+}
+
+.btn-refuse {
+  background-color:#ff0199;
+  font-family: Pacifico;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+}
+
+.hide-test{
+  display: none;
+}
+
+.test:hover + .hide-test{
+  display: block;
+}
