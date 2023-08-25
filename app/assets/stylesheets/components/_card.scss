@@ -23,11 +23,14 @@
 .card-product {
   overflow: hidden;
   height: 150px;
-  width: 450px;
+  width: 400px;
   background: rgb(252, 252, 252);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  border-radius: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
   // margin-right: 50px;
   padding-right: 10px;
   transition: transform .2s;
@@ -42,7 +45,10 @@
   height: 100%;
   width: 150px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 2px solid;
+  border-color: #00A3AC;
 }
 
 .card-product h2 {
@@ -51,6 +57,7 @@
   text-decoration: none;
   font-size: 21px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #address {
