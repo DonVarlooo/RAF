@@ -11,6 +11,7 @@
       <h2><%= @friend.name %></h2>
         <p>Catégorie : <%= @friend.category %></p>
         <p>Prix : <%= @friend.price %> €</p>
+        <p>Description : <%= @friend.description %> </p>
         <p>Adresse : <%= @friend.postal_address %></p>
       <button class="btn-book btn-outline-primary">
         <%= link_to "Book me", new_friend_booking_path(@friend) %>
