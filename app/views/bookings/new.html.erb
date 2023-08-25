@@ -18,6 +18,7 @@
     </div>
 
     <div class="col-1"></div>
+      <% if user_signed_in? %>
       <div data-controller="toggle">
         <button data-action="click->toggle#fire" class="btn-book btn-book-me btn-outline-primary mt-5"> Book me!</button>
           <div data-toggle-target="togglableElement" class="d-none col-12">
@@ -27,5 +28,10 @@
             </div>
           </div>
       </div>
+      <% else %>
+        <%= link_to new_user_session_path, class: "text-decoration-none" do%>
+          <button class="btn-book btn-book-me btn-outline-primary mt-5">Book me!</button>
+        <% end %>
+      <% end %>
   </div>
 </div>
