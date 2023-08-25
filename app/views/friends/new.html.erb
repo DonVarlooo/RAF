@@ -4,10 +4,11 @@
       <div class="bg-white p-3 shadow">
         <h3>Add a new friend</h3>
         <%= simple_form_for @friend do |f| %>
-          <%= f.input :name, placeholder: "Friend's name" %>
-          <%= f.input :category, collection: Friend::CATEGORIES%>
-          <%= f.input :price, placeholder: "Price" %>
-          <%= f.input :postal_address, placeholder: "Address" %>
+          <%= f.input :name, placeholder: "Friend's name", label: false %>
+          <%= f.input :category, collection: Friend::CATEGORIES, prompt: "Select a category", label: false%>
+          <%= f.input :price, placeholder: "Price", label: false %>
+          <%= f.input :postal_address, placeholder: "Address", label: false %>
+          <%= f.input :description, placeholder: "Description", label: false %>
           <%= f.input :photo, as: :file %>
           <%= f.submit class: 'btn-add btn-flat' %>
         <% end %>

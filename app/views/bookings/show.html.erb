@@ -10,7 +10,9 @@
       <div>
         <p>And finishes on the <%= @booking.end_date.strftime('%d/%m/%Y') %></p>
       </div>
-      <div><p>Total Price : for the meagre amount of : <%= @friend.price %> x Number of days (démerde toi pour compter)</p></div>
+      <div >
+        <p>Total Price : for the meagre amount of : <%= (((@friend.bookings.last.end_date - @friend.bookings.last.start_date)/(60*60*24) + 1) * @friend.price).to_i %> €</p>
+      </div>
     </div>
 
     <div class="col-9">
