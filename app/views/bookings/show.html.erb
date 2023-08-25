@@ -21,14 +21,14 @@
           <div class="color"><h4>The friend you chose</h4></div>
           <div class="col-6 card-show-booking-photo pb-4">
             <% if @friend.photo.attached? %>
-              <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle" %>
+              <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle img-show" %>
             <% else %>
               <img src="https://ca.slack-edge.com/T02NE0241-U05FR7JJYA3-6b713784cedc-512" />
             <% end %>
           </div>
           <div class="col-6 card-show-booking-infos">
             <div>
-              <p><%= @friend.name %></p>
+              <p class="name-color"><%= @friend.name %></p>
               <p><%= @friend.category %></p>
               <p><%= @friend.postal_address %></p>
               <p><%= @friend.description %></p>
