@@ -7,8 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Destroying all'
 User.destroy_all
-Friend.destroy_all
 Booking.destroy_all
+Friend.destroy_all
 puts 'Done!'
 
 
