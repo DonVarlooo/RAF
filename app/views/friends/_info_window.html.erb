@@ -1,7 +1,7 @@
-<%= link_to friend_path(friend), class: "text-decoration-none" do%>
+<%= link_to new_friend_booking_path(friend), class: "text-decoration-none" do%>
   <div class= "border-0">
     <h2><%= friend.name %></h2>
-    <p><%= cl_image_tag friend.photo.key, height: 150, width: 150, crop: :fill, class: "rounded-circle" %></p>
+    <p><%= cl_image_tag friend.photo.key, height: 150, width: 150, gravity: :face, crop: :fill, class: "rounded-circle" %></p>
     <p>Category: <%= friend.category %></p>
     <p>Price: <%= friend.price %> €</p>
   </div>
