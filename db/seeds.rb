@@ -103,32 +103,6 @@ rock.photo.attach(io: file, filename: "#{rock.name.downcase}.png", content_type:
 rock.save!
 
 
-jennifer = Friend.create!(
-  name: "Jennifer",
-  category: "Copilot",
-  price: rand(0..1000),
-  postal_address: "14 avenue général de Gaulle, Marseille",
-  description: "Moi, Adam et Eve, j'y crois plus tu vois, parce que je suis pas un idiot : la pomme, ça peut pas être mauvais, c'est plein de pectine..",
-  user: User.all.sample
-)
-
-file = File.open("app/assets/images/diconnelly.jpg")
-jennifer.photo.attach(io: file, filename: "#{jennifer.name.downcase}.png", content_type: "image/png")
-jennifer.save!
-
-childish = Friend.create!(
-  name: "Childish",
-  category: "Copilot",
-  price: rand(0..1000),
-  postal_address: "14 avenue général de Gaulle, Aulnay-sous-Bois",
-  description: "La drogue, c'est comme quand tu close your eyes et que tu traverses la rue.",
-  user: User.all.sample
-)
-file = File.open("app/assets/images/digambino.jpg")
-childish.photo.attach(io: file, filename: "#{childish.name.downcase}.png", content_type: "image/png")
-childish.save!
-
-
 leonardo = Friend.create!(
   name: "leonardo",
   category: "Alcoholic",
@@ -235,5 +209,31 @@ tessa = Friend.create!(
 file = File.open("app/assets/images/ditessa.jpg")
 tessa.photo.attach(io: file, filename: "#{tessa.name.downcase}.png", content_type: "image/png")
 tessa.save!
+
+jennifer = Friend.create!(
+  name: "Jennifer",
+  category: "Copilot",
+  price: rand(0..1000),
+  postal_address: "14 avenue général de Gaulle, Marseille",
+  description: "Moi, Adam et Eve, j'y crois plus tu vois, parce que je suis pas un idiot : la pomme, ça peut pas être mauvais, c'est plein de pectine..",
+  user: User.all.sample
+)
+
+file = File.open("app/assets/images/diconnelly.jpg")
+jennifer.photo.attach(io: file, filename: "#{jennifer.name.downcase}.png", content_type: "image/png")
+jennifer.save!
+
+childish = Friend.create!(
+  name: "Childish",
+  category: "Copilot",
+  price: rand(0..1000),
+  postal_address: "14 avenue général de Gaulle, Aulnay-sous-Bois",
+  description: "La drogue, c'est comme quand tu close your eyes et que tu traverses la rue.",
+  user: User.all.sample
+)
+file = File.open("app/assets/images/digambino.jpg")
+childish.photo.attach(io: file, filename: "#{childish.name.downcase}.png", content_type: "image/png")
+childish.save!
+
 
 puts 'Finished!'
