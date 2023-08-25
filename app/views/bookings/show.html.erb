@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row card-show-booking">
           <div class="color"><h4>The friend you chose</h4></div>
-          <div class="col-6 card-show-booking-photo">
+          <div class="col-6 card-show-booking-photo pb-4">
             <% if @friend.photo.attached? %>
               <%= cl_image_tag @friend.photo.key, height: 300, width: 300, gravity: :face, crop: :fill, class: "rounded-circle" %>
             <% else %>
